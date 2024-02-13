@@ -7,6 +7,7 @@ import NotFound from "./Page_not_found";
 import Home from "./Home";
 
 function Main() {
+
   return (
     <main>
       <Routes>
