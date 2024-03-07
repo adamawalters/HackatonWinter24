@@ -1,7 +1,7 @@
 # MindTrack
 
 ## Description
-The front-end is deployed[at this link](https://hackatonwinter24-3wha.onrender.com) and the server is deployed [at this link](https://hackatonwinter24-3wha.onrender.com). Feel free to sign up and create an account, or leverage the test credentials below. 
+The front-end is deployed [at this link](https://hackatonwinter24-3wha.onrender.com) and the server is deployed [at this link](https://hackatonwinter24-3wha.onrender.com). Feel free to sign up and create an account, or leverage the test credentials below. 
 
 MindTrack is a project that won the Chegg Skills Winter 2024 Hackathon. It is a web application designed to track and visualize mental health data for users. The application provides a user-friendly interface for logging daily moods, activities, and other relevant information to help users monitor and improve their mental well-being. It is a mental health tracking app intended to be sold to a company who wants to help employees track their mental health.
 
