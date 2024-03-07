@@ -47,7 +47,6 @@ function Employee({ loggedIn, setLoggedIn }) {
     async function getUser() {
       try {
         const employee = await loadEmployee(userId);
-        console.log(`employee is ${JSON.stringify(employee)}`);
         setUser(employee);
         setIsAdmin(employee.administer_access);
       } catch (error) {
