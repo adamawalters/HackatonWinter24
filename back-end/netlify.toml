@@ -8,4 +8,4 @@
   status = 200
   to = "/.netlify/functions/app/:splat"
 [build]
-  command = "echo 'default context'"
+  command = "npm i"
