@@ -19,7 +19,7 @@ function list(user_id) {
       )
     )
     .where(
-      knex.raw("hm.person_id =? order by hm.created_at limit 7 ", [user_id])
+      knex.raw("hm.person_id =? order by hm.created_at DESC limit 7 ", [user_id])
     );
 }
 

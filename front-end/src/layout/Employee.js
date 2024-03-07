@@ -47,6 +47,7 @@ function Employee({ loggedIn, setLoggedIn }) {
     async function getUser() {
       try {
         const employee = await loadEmployee(userId);
+        console.log(`employee is ${JSON.stringify(employee)}`);
         setUser(employee);
         setIsAdmin(employee.administer_access);
       } catch (error) {
@@ -239,7 +240,9 @@ function Employee({ loggedIn, setLoggedIn }) {
     );
   }
 
-  return "Loading";
+  return <div className="employee-page">
+    <h1>Loading... server can take a minute to wake up. </h1>
+  </div>
 }
 
 export default Employee;

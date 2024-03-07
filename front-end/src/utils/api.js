@@ -21,10 +21,13 @@ headers.append("Content-Type", "application/json");
 async function fetchJson(url, options, onCancel) {
   try {
     // Perform the fetch request with the provided URL and options
+    console.log(`sending fetch request to ${url} with options ${JSON.stringify(options)}`)
     const response = await fetch(url, options);
+    console.log(`response in fetchjson is ${JSON.stringify(response)}`)
 
     // Check if the response status code is 204 (No Content) and return null if so
     if (response.status === 204) {
+      console.log("fetchJson request was successful but there was no content");
       return null;
     }
 
@@ -41,11 +44,13 @@ async function fetchJson(url, options, onCancel) {
   } catch (error) {
     // If an error occurs that is not an AbortError (signifying the request was cancelled),
     // log the error stack and rethrow the error
+    console.log(`error in fetchjson is ${JSON.stringify(error)}`)
     if (error.name !== "AbortError") {
       console.error(error.stack);
       throw error;
     }
     // If the error is an AbortError, resolve the promise with the onCancel callback's result
+    console.log("fetchJson request was cancelled");
     return Promise.resolve(onCancel);
   }
 }
@@ -93,6 +98,7 @@ export async function loadEmployee(employeeId) {
   };
 
   const response = await fetchJson(url, options);
+  console.log(`response is ${JSON.stringify(response)}`)
   return response;
 }
 
