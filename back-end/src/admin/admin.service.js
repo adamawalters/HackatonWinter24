@@ -5,17 +5,18 @@ function listAll(){
     .where({administer_access: false})
     .select("*")
 }
-function findUser(search_param){
-    return knex("")
-    .select(
-      knex.raw(
-        "user_id,user_first_name ,user_last_name,user_email from user_information ui"
-      )
-    )
-    .where('user_first_name','like',`%${search_param}%`)
-    .orWhere('user_last_name','like',`%${search_param}%`)
-    .orWhere('user_email','like',`%${search_param}%`)  
+
+function findUser(search_param) {
+    return knex('user_information')
+        .select('user_id', 'user_first_name', 'user_last_name', 'user_email')
+        .where(function() {
+            this.where(knex.raw('LOWER(user_first_name)'), 'like', `%${search_param.toLowerCase()}%`)
+                .orWhere(knex.raw('LOWER(user_last_name)'), 'like', `%${search_param.toLowerCase()}%`)
+                .orWhere(knex.raw('LOWER(user_email)'), 'like', `%${search_param.toLowerCase()}%`);
+        });
 }
+
+
 async function remove(user_id){
     try{
         const resp = await removeHealthMetrics(user_id);
