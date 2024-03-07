@@ -1,8 +1,7 @@
 // Define the base URL for the API, prioritizing the environment variable if it exists, or defaulting to localhost
 
 
-const API_BASE_URL = "http://localhost:5001";
-
+const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5001";
 
 
 // Initialize a new Headers object to configure HTTP request headers
