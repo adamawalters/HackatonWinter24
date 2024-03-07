@@ -4,6 +4,8 @@ const app = express();
 const errorHandler = require("./errors/errorHandler");
 const notFound = require("./errors/notFound");
 
+const serverless = require("serverless-http");
+
 const loginRouter = require("./login/login.router");
 const metricsRouter = require("./metrics/metrics.router");
 const signupRouter = require("./signup/signup.router");
@@ -23,3 +25,4 @@ app.use(errorHandler);
 
 
 module.exports = app;
+module.exports.handler = serverless(app);
