@@ -8,7 +8,7 @@ MindTrack is a project that won the Chegg Skills Winter 2024 Hackathon. It is a 
 **Please note that the server will take a minute to spin up as it's a free tier**
 
 ## Features
-- User authentication system
+- User and Admin roles - admin has access to an admin view where they can view and delete employees
 - Dashboard for logging daily moods, activities, and notes
 - Visualization of mental health data using FusionCharts
 - Interactive charts for tracking mood trends over time
