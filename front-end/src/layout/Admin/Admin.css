@@ -16,7 +16,7 @@
 
 .top-ad {
   height: 20%;
-  display: flex;
+  display: flex !important;
 }
 
 .admin-title {
