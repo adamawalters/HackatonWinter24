@@ -106,7 +106,7 @@ function Admin({loggedIn}) {
       <section className="admin-section" id="admin">
         {error ? <ErrorAlert error={error} /> : null}
         <div className="stack stack-wrp">
-          <div className="top-ad">
+          <div className="top-ad-newname">
             <div className="admin-title">
               <h2>Welcome Admin User!</h2>
             </div>
