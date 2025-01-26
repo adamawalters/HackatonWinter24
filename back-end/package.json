@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@flydotio/dockerfile": "^0.7.4",
     "nodemon": "^2.0.22"
   }
 }
